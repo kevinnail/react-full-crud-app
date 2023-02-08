@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { NavLink, useParams } from 'react-router-dom';
+import { NavLink, Redirect, useParams } from 'react-router-dom';
 import { useUser } from '../../context/UserContext.js';
 import { authUser } from '../../services/auth.js';
-
+import './Auth.css';
 export default function Auth() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -10,7 +10,7 @@ export default function Auth() {
   const { type } = useParams();
 
   if (user) {
-    // return <Redirect to="/" />;
+    return <Redirect to="/" />;
   }
 
   const submitAuth = async () => {
