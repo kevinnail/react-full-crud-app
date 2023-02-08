@@ -28,8 +28,8 @@ export default function Auth() {
         <NavLink to="/auth/sign-in">Sign-in</NavLink>
         <NavLink to="/auth/sign-up">Sign-up</NavLink>
       </div>
+
       <div className="email-container">
-        <label>Email</label>
         <input
           className="input"
           type="email"
@@ -37,8 +37,7 @@ export default function Auth() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-      </div>
-      <div>
+
         <input
           className="input"
           type="password"
@@ -47,6 +46,7 @@ export default function Auth() {
           onChange={(e) => setPassword(e.target.value)}
         />
       </div>
+
       <div>
         <button onClick={submitAuth}>Submit</button>
       </div>
