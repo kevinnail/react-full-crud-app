@@ -14,13 +14,11 @@ header {
 }
 
 button {
-  /* grid-column-start: 3; */
   padding: 8px;
 }
 
 a {
   text-decoration: none;
-  /* grid-column-start: 2; */
   padding: 8px;
 }
 
@@ -59,13 +57,11 @@ span {
 .header-section {
   display: grid;
   grid-template-columns: 60% 20% 20%;
-  /* gap: 20px; */
   align-items: center;
   min-width: 500px;
 }
 
 p {
-  /* background-color: #fff; */
   color: #fff;
   font-size: 20px;
   width: 400px;
@@ -82,5 +78,4 @@ h1 {
 .icon {
   width: 50px;
   justify-self: flex-end;
-  /* margin: 5px 250px; */
 }

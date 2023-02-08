@@ -17,6 +17,7 @@ a,
 label {
   margin: 50px;
 }
+
 .email-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -24,6 +25,7 @@ label {
   justify-items: center;
   gap: 20px;
 }
+
 input {
   height: 30px;
 }
