@@ -13,16 +13,14 @@ export default function Header() {
 
   return (
     <header>
-      <h2>Bulletin Board</h2>
+      <h1>Bulletin Board</h1>
       {user && (
-        <div className="">
+        <div className="header-section">
           <p>
-            We are selling this email: <span> {user.email}</span> to everyone! Oh wait no, sorry
-            please disregard I must have mistyped that your email is totally safe with us, we are
-            big on privacy. Welcome!
+            EMAIL FOR SALE: <span> {user.email}</span> <br />
           </p>
-          <button onClick={handleClick}>Sign Out</button>
           <Link to="/posts/new">New Post</Link>
+          <button onClick={handleClick}>Sign Out</button>
         </div>
       )}
     </header>
