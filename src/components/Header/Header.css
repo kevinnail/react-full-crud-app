@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+header {
+  background-color: #000;
+  background-image: linear-gradient(315deg, #000 36%, rgb(68, 0, 255), #000);
+  color: #fff;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 10% 25% 65%;
+  height: 90px;
+  width: 100%;
+  box-sizing: border-box;
+  min-width: 1000px;
+}
+
+button {
+  /* grid-column-start: 3; */
+  padding: 8px;
+}
+
+a {
+  text-decoration: none;
+  /* grid-column-start: 2; */
+  padding: 8px;
+}
+
+button,
+a {
+  background: rgb(68, 0, 255);
+  color: #b9b9b9;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  transition: 400ms;
+  box-shadow: 2px 2px 20px 0px rgb(133, 133, 133);
+  border: 1px solid black;
+  margin: 0 5px;
+  width: 150px;
+}
+
+button:hover,
+a:hover {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid rgb(68, 0, 255);
+  box-shadow: 0 0 15px 5px rgb(68, 0, 255);
+}
+
+span {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+.header-section {
+  display: grid;
+  grid-template-columns: 60% 20% 20%;
+  /* gap: 20px; */
+  align-items: center;
+  min-width: 500px;
+}
+
+p {
+  /* background-color: #fff; */
+  color: #fff;
+  font-size: 20px;
+  width: 400px;
+}
+
+h1 {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 40px;
+  color: #fff;
+  margin: 0;
+  min-width: 200px;
+}
+
+.icon {
+  width: 50px;
+  justify-self: flex-end;
+  /* margin: 5px 250px; */
+}
