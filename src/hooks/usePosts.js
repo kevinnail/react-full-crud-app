@@ -1,11 +1,11 @@
-import React from 'react';
+import { useState } from 'react';
 import { useEffect } from 'react';
 import { getPosts } from '../services/posts.js';
 
 export function usePosts() {
-  const [posts, setPosts] = React.useState([]);
-  const [error, setError] = React.useState('');
-  const [loading, setLoading] = React.useState(true);
+  const [posts, setPosts] = useState([]);
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -20,5 +20,5 @@ export function usePosts() {
     };
     fetchData();
   }, []);
-  return { posts, error, loading };
+  return { posts, error, loading, setLoading, setError };
 }

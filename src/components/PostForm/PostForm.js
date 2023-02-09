@@ -4,13 +4,7 @@ import { useState } from 'react';
 export default function PostForm({ title = '', description = '', submitHandler }) {
   const [titleInput, setTitleInput] = useState(title);
   const [descriptionInput, setDescriptionInput] = useState(description);
-  console.log('title prop: ', title);
-  console.log('description prop: ', description);
 
-  const myFunction = () => {
-    console.log('running my function!');
-  };
-  myFunction();
   return (
     <div>
       <label>Title</label>

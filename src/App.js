@@ -6,6 +6,7 @@ import { Redirect, Route, Switch } from 'react-router-dom';
 import Header from './components/Header/Header.js';
 import Posts from './components/Posts/Posts.js';
 import NewPost from './components/NewPost/NewPost.js';
+import EditPost from './components/EditPost/EditPost.js';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Header />
       <Switch>
         <Route exact path="/auth/:type" component={Auth} />
+        <Route path="/posts/edit/:id" component={EditPost} />
         <Route path="/posts/new" component={NewPost} />
         <Route path="/posts" component={Posts} />
         <Route path="*">
