@@ -2,11 +2,10 @@ import React from 'react';
 import { Redirect } from 'react-router-dom';
 import { useUser } from '../../context/UserContext.js';
 import { usePosts } from '../../hooks/usePosts.js';
-
+import './Posts.css';
 export default function Posts() {
   const { user } = useUser();
   const { posts } = usePosts();
-  console.log('posts', posts);
 
   if (!user) {
     return <Redirect to="/auth/sign-in" />;
@@ -15,7 +14,10 @@ export default function Posts() {
   return (
     <div>
       {posts.map((post) => (
-        <h1 key={post.id}>{post.title}</h1>
+        <div className="post" key={post.id}>
+          <h1>{post.title}</h1>
+          <p>{post.description}</p>
+        </div>
       ))}
     </div>
   );
