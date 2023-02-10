@@ -79,3 +79,7 @@ h1 {
   width: 50px;
   justify-self: flex-end;
 }
+
+.home {
+  box-shadow: none;
+}
