@@ -13,7 +13,9 @@ export default function Header() {
 
   return (
     <header>
-      <img className="icon" src="../bulletin-board-icon.png" />
+      <a className="home" href="/posts">
+        <img className="icon" src="../bulletin-board-icon.png" />
+      </a>
       <h1>Bulletin Board</h1>
       {user && (
         <div className="header-section">
