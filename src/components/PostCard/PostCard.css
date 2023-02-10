@@ -1,0 +1,33 @@
+.edit-button {
+  width: 20px;
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+  grid-column: 2;
+}
+
+.delete-button {
+  width: 20px;
+  background-color: rgb(255, 41, 41);
+  border: 2px solid black;
+  padding: 5px;
+  border-radius: 5px;
+  grid-column-start: 3;
+}
+
+.edit-link {
+  display: block-inline;
+  position: relative;
+  width: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  margin: auto;
+}
+
+.button-container {
+  display: grid;
+  grid-template-columns: 70% 15% 15%;
+  margin: 10px;
+}
