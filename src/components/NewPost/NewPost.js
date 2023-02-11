@@ -12,7 +12,6 @@ export default function NewPost() {
     return <Redirect to="/auth/sign-in" />;
   }
   const handleSubmit = async (title, description) => {
-    console.log('handling submit!');
     // call service to add new form
     try {
       await createPost(title, description);
