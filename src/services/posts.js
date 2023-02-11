@@ -19,3 +19,10 @@ export async function getPostDetail(id) {
   const resp = await client.from('posts').select('*').match({ id }).single();
   return checkError(resp);
 }
+
+export async function deletePost(id) {
+  const resp = await client.from('posts').delete().match({ id });
+  console.log('deletePost resp: ', resp);
+
+  return checkError(resp);
+}
