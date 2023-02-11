@@ -1,20 +1,22 @@
+// import { Link, useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { useUser } from '../../context/UserContext';
+import { usePost } from '../../hooks/usePost.js';
 import { deletePost } from '../../services/posts.js';
 import './PostCard.css';
 
-export default function PostCard({ title, description, user_id, id }) {
+export default function PostCard({ title, description, user_id, id, setPosts, posts }) {
   const { user } = useUser();
   const owner = user.id === user_id;
+  const { setLoading, setError } = usePost(id);
 
   const handleDelete = async (title, description) => {
-    // setLoading(true);
-
     try {
+      setPosts(posts.filter((post) => post.id !== id));
       await deletePost(id, title, description);
-      history.push('/posts');
+      setLoading(true);
     } catch (e) {
-      // setError(e.message);
+      setError(e.message);
     }
   };
 

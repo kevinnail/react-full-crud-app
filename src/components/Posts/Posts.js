@@ -7,7 +7,7 @@ import './Posts.css';
 
 export default function Posts() {
   const { user } = useUser();
-  const { posts } = usePosts();
+  const { posts, setPosts } = usePosts();
 
   if (!user) {
     return <Redirect to="/auth/sign-in" />;
@@ -16,7 +16,7 @@ export default function Posts() {
   return (
     <div>
       {posts.map((post) => (
-        <PostCard key={post.id} {...post} />
+        <PostCard key={post.id} {...post} posts={posts} setPosts={setPosts} />
       ))}
     </div>
   );
