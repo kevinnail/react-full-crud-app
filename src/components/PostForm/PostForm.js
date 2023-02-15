@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './PostForm.css';
 
 export default function PostForm({ title = '', description = ' ', submitHandler }) {
   const [titleInput, setTitleInput] = useState(title);
@@ -10,10 +11,11 @@ export default function PostForm({ title = '', description = ' ', submitHandler 
   };
 
   return (
-    <form onSubmit={handleFormSubmit}>
+    <form className="new-post-form" onSubmit={handleFormSubmit}>
       <div>
-        <label>Title</label>
+        <label className="form-title">Title</label>
         <input
+          className="title-input"
           type="text"
           name="title"
           value={titleInput}
@@ -21,8 +23,9 @@ export default function PostForm({ title = '', description = ' ', submitHandler 
         />
       </div>
       <div>
-        <label>Description</label>
-        <input
+        <label className="form-title">Description</label>
+        <textarea
+          className="description-input"
           type="text"
           name="description"
           value={descriptionInput}

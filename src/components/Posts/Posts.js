@@ -14,7 +14,7 @@ export default function Posts() {
   }
 
   return (
-    <div>
+    <div className="list-container">
       {posts.map((post) => (
         <PostCard key={post.id} {...post} posts={posts} setPosts={setPosts} />
       ))}
