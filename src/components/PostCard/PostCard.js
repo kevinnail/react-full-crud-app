@@ -1,14 +1,22 @@
-// import { Link, useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { useUser } from '../../context/UserContext';
 import { usePost } from '../../hooks/usePost.js';
 import { deletePost } from '../../services/posts.js';
+import { useComments } from '../../hooks/useComments.js'; // import the useComments hook
 import './PostCard.css';
 
 export default function PostCard({ title, description, user_id, id, setPosts, posts }) {
   const { user } = useUser();
   const owner = user.id === user_id;
   const { setLoading, setError } = usePost(id);
+  const {
+    comments,
+    setComments,
+    loading,
+    setLoading: setLoadingComments,
+    error: errorComments,
+    setError: setErrorComments,
+  } = useComments(id); // use the useComments hook to get the comments for the post
 
   const handleDelete = async (title, description) => {
     try {
@@ -35,6 +43,17 @@ export default function PostCard({ title, description, user_id, id, setPosts, po
           </Link>
         </p>
       )}
+      <div>
+        {loading && <p>Loading comments...</p>}
+        {/* {errorComments && <p>Error loading comments: {errorComments}</p>} */}
+        {comments && (
+          <ul>
+            {comments.map((comment) => (
+              <li key={comment.id}>{comment.content}</li>
+            ))}
+          </ul>
+        )}
+      </div>
     </div>
   );
 }
