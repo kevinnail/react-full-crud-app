@@ -6,8 +6,11 @@
   justify-content: center;
   margin: 20px auto;
   border: 2px solid #ffffff;
-  width: 500px;
+  width: 80%;
   align-self: center;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px 0 #000000;
 }
 
 .post h1 {
@@ -18,6 +21,7 @@
 
 .post p {
   align-self: center;
+  width: 80%;
 }
 
 .list-container {

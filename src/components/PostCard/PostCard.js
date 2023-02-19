@@ -9,14 +9,7 @@ export default function PostCard({ title, description, user_id, id, setPosts, po
   const { user } = useUser();
   const owner = user.id === user_id;
   const { setLoading, setError } = usePost(id);
-  const {
-    comments,
-    setComments,
-    loading,
-    setLoading: setLoadingComments,
-    error: errorComments,
-    setError: setErrorComments,
-  } = useComments(id); // use the useComments hook to get the comments for the post
+  const { comments, loading } = useComments(id); // use the useComments hook to get the comments for the post
 
   const handleDelete = async (title, description) => {
     try {

@@ -28,6 +28,6 @@
 
 .button-container {
   display: grid;
-  grid-template-columns: 70% 15% 15%;
-  margin: 10px;
+  grid-template-columns: 80% 1fr 1fr;
+  position: relative;
 }
